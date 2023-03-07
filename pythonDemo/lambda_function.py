@@ -1,10 +1,10 @@
-from usecase.sintaxe.execute_sintaxe import ExecuteSintaxe
+from usecase.syntax.execute_syntax import ExecuteSyntax
 
 
 def lambda_handler(event, context):
     try:
         print('lambda-function')
-        execute_sintaxe = ExecuteSintaxe(event)
+        execute_sintaxe = ExecuteSyntax(event)
         execute_sintaxe.execute()
     except Exception as e:
         raise e
