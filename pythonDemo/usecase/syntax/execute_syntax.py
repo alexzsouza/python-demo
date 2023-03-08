@@ -11,7 +11,11 @@ class ExecuteSyntax:
 
     def execute(self):
         print('executar-demo-syntax')
-        self.statement = [ExecuteStatementIfImpl(), ExecuteStatementForImpl(), ExecuteStatementDateImpl()]
+        self.statement = [
+            ExecuteStatementIfImpl(parameter=-1, fruits=['orange', 'apple', 'banana'], validate=False),
+            ExecuteStatementForImpl(fruits=['pear', 'strawberry', 'lemon']),
+            ExecuteStatementDateImpl()
+        ]
 
         for sta in self.statement:
             sta.execute()
